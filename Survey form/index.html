@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Survey-form</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+
+    <section class="head-sec">
+       
+      <h1 id="title">Coding Camp Survey-form</h1>
+
+      <p id="description">
+        Free coding bootcamp! Learn professional skills for free. <br>Enroll now!
+      </p>
+
+    </section>
+    
+    
+    <section class="main-sec">
+        <div class="form-container">
+            <form id="survey-form">
+                <section class="info">
+                  <div class="form-group">
+                    <label id="first-label" for="first-name">First Name:</label>
+                    <input
+                      type="text"
+                      name="first-name"
+                      id="first-name"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+        
+                  <div class="form-group">
+                    <label id="last-label" for="last-name">Last Name:</label>
+                    <input
+                      type="text"
+                      name="last-name"
+                      id="last-name"
+                      class="form-control"
+                      required
+                    />
+                    
+                  </div>
+                  
+                  <div class="form-group">
+                    <label id="email-label" for="email">Email:</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+        
+                  <div class="form-group">
+                    <label id="dob-label" for="date">Date of birth:</label>
+                    <input
+                      type="date"
+                      name="date"
+                      min="18"
+                      max="60"
+                      id="age"
+                      class="form-control"
+                      required
+                    />
+                  </div>
+                
+                <div class="form-group">
+                  <p>
+                    What were you born as ?
+                  </p>
+                    <label>
+                      <input
+                        name="gender"
+                        value="male"
+                        type="radio"
+                        class="input-radio"
+                      />Male
+                    </label>
+        
+                    <label>
+                      <input
+                        name="gender"
+                        value="female"
+                        type="radio"
+                        class="input-radio"
+                      />Female.
+                    </label>
+                  </p>
+                </div>
+                <div class="form-group">
+                  <p>What describes you most?</p>
+        
+                  <select id="dropdown" name="level" class="form-control" required>
+                    <option disabled selected value>Select your level</option>
+                    <option value="student">Student</option>
+                    <option value="learner">Professional</option>
+                    <option value="developer">Researcher</option>
+                    <option value="designer">Other</option>
+                  </select>
+                </div>
+        
+                <div class="form-group">
+                  <p>
+                    What are you interested in?
+                  </p>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="ui-ux"
+                      class="input-checkbox"
+                    />UI/UX design
+                  </label>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="front-end"
+                      class="input-checkbox"
+                    />Front-end design
+                  </label>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="back-end"
+                      class="input-checkbox"
+                    />Back-end coding
+                  </label>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="mobile-app"
+                      class="input-checkbox"
+                    />Mobile app-development
+                  </label>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="machine-deep"
+                      class="input-checkbox"
+                    />Machine deep learning
+                  </label>
+        
+                  <label>
+                    <input
+                      name="skills"
+                      type="checkbox"
+                      value="data-analyis"
+                      class="input-checkbox"
+                    />Data-analysis
+                  </label>
+                </div>
+        
+                <div class="form-group">
+                  <p>Describe yourself in less word as possible:</p>
+                  <textarea
+                    name="self"
+                    id="self-des"
+                    class="input-textarea"
+                    cols="30"
+                    rows="5"
+                    placeholder="I am a student ...."
+                  ></textarea>
+                </div>
+        
+                <div class="form-group">
+                  <button type="submit" id="submit" class="submit-button">
+                    Submit
+                  </button>
+                </div>
+              </form>
+    
+
+        </div>
+       
+    </section>
+      
+          
+    </div>
+  </body>
+</html>

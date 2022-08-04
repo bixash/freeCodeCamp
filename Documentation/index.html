@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Documentation Python</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <nav id="nav-bar">
+        <div class="container">
+            <header>Python Documentation</header>
+            <ul class="nav-links">
+                <li><a href="#introduction">Introduction</a></li>
+                <li><a href="#why_python_use">Why to use python ?</a></li>
+                <li><a href="#numbers">Numbers</a></li>
+                <li><a href="#strings">Strings</a></li>
+                <li><a href="#lists">Lists</a></li>
+                <li><a href="#if_statements">If statements</a></li>
+                <li><a href="#for_statements">For statements</a></li>
+                <li><a href="#the_range">The range() function</a></li>
+                <li><a href="#break_statements">Break and continue statements</a></li>
+                <li><a href="#pass_statements">Pass statements</a></li>
+                <li><a href="#defining_function">Defining functions</a></li>
+                <li><a href="#reference">Reference</a></li>
+
+            </ul>
+        </div>
+        
+    </nav>
+
+    <main id="main-doc">
+
+        <section class="main-section" id="introduction">
+
+            <h2>Introduction</h2>
+            <p>
+                Python is an easy to learn, powerful programming language. 
+                It has efficient high-level data structures and a simple but effective approach to object-oriented programming. 
+                Python’s elegant syntax and dynamic typing, together with its interpreted nature, make it an ideal language for 
+                scripting and rapid application development in many areas on most platforms.
+            </p>
+        </section>
+
+        <section class="main-section" id="why_python_use">
+
+            <h2>Why to use python?</h2>
+            <ul>
+                <li>
+                <P> If you do much work on computers, eventually you find that there’s some task you’d like to automate. 
+                    For example, you may wish to perform a search-and-replace over a large number of text files, or rename 
+                    and rearrange a bunch of photo files in a complicated way. Perhaps you’d like to write a small custom database, 
+                    or a specialized GUI application, or a simple game.</P>
+                </li>
+                <li>
+                    <p>If you’re a professional software developer, you may have to work with several C/C++/Java libraries but find the usual 
+                    write/compile/test/re-compile cycle is too slow. Perhaps you’re writing a test suite for such a library and find writing the testing code 
+                    a tedious task. Or maybe you’ve written 
+                    a program that could use an extension language, and you don’t want to design and 
+                    implement a whole new language for your application.</p>
+                </li>
+                
+                
+                    <p>Python enables programs to be written compactly and readably. Programs written in Python are typically much shorter 
+                    than equivalent C, C++, or Java programs, for several reasons:</p>
+                    <ul>
+                        <li> <p>the high-level data types allow you to express complex operations in a single statement;</p></li>
+
+                        <li><p>statement grouping is done by indentation instead of beginning and ending brackets;</p></li>
+
+                        <li><p>o variable or argument declarations are necessary.</p></li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </section>
+
+        <section class="main-section" id="numbers">
+
+            <h2>Numbers</h2>
+                <p>
+                    The interpreter acts as a simple calculator: you can type an expression at it and it will write the value. 
+                    Expression syntax is straightforward: the operators +, -, * and / work just like in most other languages 
+                    (for example, Pascal or C); parentheses (()) can be used for grouping. For example:
+                </p>
+
+            <code>>>> 2 + 2
+                4
+                >>> 50 - 5*6
+                20
+                >>> (50 - 5*6) / 4
+                5.0
+                >>> 8 / 5  # division always returns a floating point number
+                1.6
+            </code>
+
+        </section>
+
+        <section class="main-section" id="strings">
+
+            <h2>Strings</h2>
+
+        <p>Besides numbers, Python can also manipulate strings, 
+            which can be expressed in several ways. They can be enclosed in 
+            single quotes ('...') or double quotes ("...") with the same result 2. \ can be used to escape quotes:
+            </p> 
+            <code>>>> 'spam eggs'  # single quotes
+                'spam eggs'
+                >>> 'doesn\'t'  # use \' to escape the single quote...
+                "doesn't"
+                >>> "doesn't"  # ...or use double quotes instead
+                "doesn't"
+                >>> '"Yes," they said.'
+                '"Yes," they said.'
+                >>> "\"Yes,\" they said."
+                '"Yes," they said.'
+                >>> '"Isn\'t," they said.'
+                '"Isn\'t," they said.'
+            </code>
+
+        </section>
+
+        <section class="main-section" id="lists">
+            <h2>Lists</h2>
+            <P>Python knows a number of compound data types, used to group together other values. The most versatile is the list, 
+            which can be written as a list of comma-separated values (items) between square brackets. Lists might contain items of different types, 
+            but usually the items all have the same type.
+            </P>
+
+            <code>>>> squares = [1, 4, 9, 16, 25]
+                >>> squares
+                [1, 4, 9, 16, 25]
+
+
+                
+            </code>
+            <p>Like strings (and all other built-in sequence types), lists can be indexed and sliced:</p>
+            <code>>>> squares[0]  # indexing returns the item
+                1
+                >>> squares[-1]
+                25
+                >>> squares[-3:]  # slicing returns a new list
+                [9, 16, 25]
+            </code>
+        </section>
+
+        <section class="main-section" id="if_statements">
+
+            <h2>if Statements</h2>
+            <p>Perhaps the most well-known statement type is the if statement. For example:</p>
+
+            <code>>>> x = int(input("Please enter an integer: "))
+                Please enter an integer: 42
+                >>> if x < 0:
+                ...     x = 0
+                ...     print('Negative changed to zero')
+                ... elif x == 0:
+                ...     print('Zero')
+                ... elif x == 1:
+                ...     print('Single')
+                ... else:
+                ...     print('More')
+                ...
+                More
+            </code>
+            <p>There can be zero or more elif parts, and the else part is optional. The keyword ‘elif’ is short for ‘else if’, 
+                and is useful to avoid excessive indentation. 
+                An if … elif … elif … sequence is a substitute for the switch or case statements found in other languages.
+                </p> 
+        </section>
+
+        <section class="main-section" id="for_statements">
+            <h2>for Statements</h2>
+
+            <p> 
+                The for statement in Python differs a bit from what you may be used to in C or Pascal. 
+                Rather than always iterating over an arithmetic progression of numbers (like in Pascal), or giving the user 
+                the ability to define both the iteration step and halting condition (as C), Python’s for statement iterates over the items of 
+                any sequence (a list or a string), in the order that they appear in the sequence. For example (no pun intended): </p>
+
+                <code>>>> # Measure some strings:
+                    ... words = ['cat', 'window', 'defenestrate']
+                    >>> for w in words:
+                    ...     print(w, len(w))
+                    ...
+                    cat 3
+                    window 6
+                    defenestrate 12
+                </code>
+        </section>
+
+        <section class="main-section" id="the_range">
+
+            <h2>The range() Function</h2>
+            <p>If you do need to iterate over a sequence of numbers, the built-in function range() comes in handy. 
+                It generates arithmetic progressions:
+            </p>
+            <code>>>> for i in range(5):
+                ...     print(i)
+                ...
+                0
+                1
+                2
+                3
+                4
+            </code>
+
+            <p>The given end point is never part of the generated sequence; range(10) generates 10 values, the legal indices for items of a sequence 
+            of length 10. It is possible to let the range start at another number, or to specify a different increment (even negative; sometimes 
+            this is called the ‘step’):</p>
+
+            <code>range(5, 10)
+                5, 6, 7, 8, 9
+
+                range(0, 10, 3)
+                0, 3, 6, 9
+
+                range(-10, -100, -30)
+                -10, -40, -70
+            </code>
+
+        </section>
+
+        <section class="main-section" id="break_statements">
+            <h2>Break and continue Statements, and else Clauses on Loops</h2>
+            <p>The break statement, like in C, breaks out of the innermost enclosing for or while loop.</p>
+
+            <p>Loop statements may have an else clause; it is executed when the loop terminates through exhaustion of the iterable (with for) or 
+            when the condition becomes false (with while), but not when the loop is terminated by a break statement. 
+            This is exemplified by the following loop, which searches for prime numbers:
+            </p>
+            <code>>>> for n in range(2, 10):
+                ...     for x in range(2, n):
+                ...         if n % x == 0:
+                ...             print(n, 'equals', x, '*', n//x)
+                ...             break
+                ...     else:
+                ...         # loop fell through without finding a factor
+                ...         print(n, 'is a prime number')
+                ...
+                2 is a prime number
+                3 is a prime number
+                4 equals 2 * 2
+                5 is a prime number
+                6 equals 2 * 3
+                7 is a prime number
+                8 equals 2 * 4
+                9 equals 3 * 3
+            </code>
+            
+            <p>(Yes, this is the correct code. Look closely: the else clause belongs to the for loop, not the if statement.)
+
+            When used with a loop, the else clause has more in common with the else clause of a try statement than it does with that of 
+            if statements: a try statement’s else clause runs when no exception occurs, 
+            and a loop’s else clause runs when no break occurs. For more on the try statement and exceptions, see Handling Exceptions.
+            </p>
+        </section>
+
+        <section class="main-section" id="pass_statements">
+
+            <h2>pass statements</h2>
+            <p>  The pass statement does nothing. It can be used when a statement is required syntactically but the program requires no action. 
+                For example:
+            </p>  
+
+            <code>>>> while True:
+                ...     pass  # Busy-wait for keyboard interrupt (Ctrl+C)
+                ...
+            </code>
+
+        </section>
+        
+        <section class="main-section" id="defining_function ">
+            <h2>Defining functions</h2>
+            <p>We can create a function that writes the Fibonacci series to an arbitrary boundary:
+
+            </p>
+
+            <code>>>> def fib(n):    # write Fibonacci series up to n
+                ...     """Print a Fibonacci series up to n."""
+                ...     a, b = 0, 1
+                ...     while a < n:
+                ...         print(a, end=' ')
+                ...         a, b = b, a+b
+                ...     print()
+                ...
+                >>> # Now call the function we just defined:
+                ... fib(2000)
+                0 1 1 2 3 5 8 13 21 34 55 89 144 233 377 610 987 1597
+            </code>
+
+            <p>The keyword def introduces a function definition. It must be followed by the function name and the parenthesized list of formal parameters. 
+            The statements that form the body of the function start at the next line, and must be indented.
+
+            The first statement of the function body can optionally be a string literal; this string literal is the function’s documentation string, 
+            or docstring. (More about docstrings can be found in the section Documentation Strings.) There are tools which use docstrings to 
+            automatically produce online or printed documentation, or to let the user interactively browse through code; 
+            it’s good practice to include docstrings in code that you write, so make a habit of it.
+            </p>
+        </section> 
+
+        <section class="main-section" id="reference">
+            <h2>Reference</h2>
+            <p> 
+                The Python interpreter and the extensive standard library are freely available in source or binary form for 
+                all major platforms from the Python Web site, and may be freely distributed. 
+                The same site also contains distributions of and pointers to many free third party Python modules, 
+                programs and tools, and additional documentation.</p>
+
+                <p>All the documentation in this page is taken from <a href="https://docs.python.org/3/">MDN</a> .</p>
+
+        </section>
+    </main>
+    
+
+</body>
+</html>
+
+

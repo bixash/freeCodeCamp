@@ -1,0 +1,126 @@
+body {
+  /* Native font stack https://getbootstrap.com/docs/4.2/content/reboot/#native-font-stack */
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-align: center;
+  color: black;
+  margin: 0;
+  background-color: #F0E9E3;
+}
+
+.titlebar {
+  background-color: white;
+  -webkit-box-shadow: 20px 25px 40 60;
+          box-shadow: 20px 25px 40 60;
+  margin: 0;
+  color: black;
+}
+
+.titlebar:hover {
+  background-color: black;
+}
+
+.titlebar:hover #title {
+  color: white;
+}
+
+.titlebar:hover #subtitle {
+  color: white;
+}
+
+.titlebar #title {
+  font-size: 1.9em;
+  color: black;
+}
+
+.titlebar #subtitle {
+  font-size: 20px;
+  background-color: none;
+  margin-top: -35px;
+  color: black;
+  padding-bottom: 20px;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+  margin: 0 auto;
+  border: 10px solid white;
+}
+
+figcaption {
+  color: grey;
+}
+
+section .container {
+  margin: 10px 50px 10px 50px;
+  text-align: center;
+  border-radius: 0.5em;
+  background-color: white;
+}
+
+section .container .info {
+  font-size: 18px;
+  text-align: left;
+  padding: 50px;
+}
+
+section .container .info ul strong {
+  color: grey;
+}
+
+section .container .info ul li {
+  margin: 16px 0;
+}
+
+section .container .info h3 {
+  text-align: center;
+  background-color: #F0E9E3;
+  width: 150px;
+  color: grey;
+  border-radius: 10px;
+}
+
+h4 {
+  border-radius: 0.5em;
+  background-color: white;
+  padding: 0.5em;
+  margin: 0 150px;
+}
+
+h4:hover {
+  background-color: black;
+  color: white;
+}
+
+h4 #tribute-link {
+  text-decoration: none;
+  color: grey;
+}
+
+@media only screen and (max-width: 1000px) {
+  img {
+    width: 60%;
+    border: 5px solid white;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  img {
+    width: 80%;
+    border: 5px solid white;
+  }
+  h4 {
+    border-radius: 0.5em;
+    background-color: white;
+    padding: 0em;
+    margin: 0 100px;
+  }
+  h4 #tribute-link {
+    text-decoration: none;
+    color: grey;
+  }
+}
+/*# sourceMappingURL=main.css.map */
